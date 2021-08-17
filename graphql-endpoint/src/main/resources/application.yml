@@ -1,0 +1,29 @@
+spring:
+  main:
+    banner-mode: off
+  jmx:
+    enabled: false
+
+server:
+  port: 8888
+
+graphql:
+  tools:
+    schema-location-pattern: bank.graphql
+    # Enable or disable the introspection query. Disabling it puts your server in contravention of the GraphQL
+    # specification and expectations of most clients, so use this option with caution
+    introspection-enabled: true
+  servlet:
+    subscriptions:
+      websocket:
+        path: /graphql-ws
+
+# axon framework
+axon:
+  axonserver:
+    client-id: graphql-endpoint
+
+logging:
+  level:
+    ROOT: WARN
+    nl.openweb.graphql_endpoint: INFO

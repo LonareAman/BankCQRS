@@ -1,0 +1,6 @@
+# axon framework
+axon:
+  axonserver:
+    client-id: command-handler
+#logging.level.org.apache.kafka: debug
+logging.level.root: info
